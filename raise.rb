@@ -1,10 +1,14 @@
 # frozen_string_literal: true
 
 # 見直し:https://rex.libertyfish.co.jp/exam_histories
-# リファレンス:https://jp-seemore.com/web/9618/#toc6
+# リファレンス:https://docs.ruby-lang.org/ja/latest/class/RuntimeError.html
 
-# 正常なエラーメッセージが発生する。正確にはStandardErrorを発生している。
-raise 'Error Message'
-
-# 配列ではなく文字列がraiseの引数として必要（exception class/object expected及びTypeErrorが発生し、raise自体のエラーが発生する）
-raise ['Error Message']
+# raiseメソッドは、引数を指定しない場合RuntimeErrorが発生する
+# RuntimeError は StandardError のサブクラスで、具体的には StandardError は RuntimeError とその他の例外クラスの親クラスを意味する
+# 参考:https://lhiroki1205.hatenablog.com/entry/2019/02/26/144914
+begin
+  raise '特定の例外が発生しました'
+rescue StandardError => e
+  puts e.class   # => RuntimeError
+  puts e.message # => 特定の例外が発生しました
+end
