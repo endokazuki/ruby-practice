@@ -13,8 +13,8 @@ d = Date.new(2024, 2, 15)
 
 # %Mと%mは別物
 # %Dと%xは同じ
-puts d.strftime("%Y/%M/%D")
-puts d.strftime("%y/%m/%d")
-puts d.strftime("%x")
+puts d.strftime('%Y/%M/%D')
+puts d.strftime('%y/%m/%d')
+puts d.strftime('%x')
 
-puts ("15/02/24" == d.strftime("%d/%m/%y") ? "OK" : "NG")
+puts('15/02/24' == d.strftime('%d/%m/%y') ? 'OK' : 'NG')
