@@ -17,4 +17,4 @@ puts d.strftime('%Y/%M/%D')
 puts d.strftime('%y/%m/%d')
 puts d.strftime('%x')
 
-puts('15/02/24' == d.strftime('%d/%m/%y') ? 'OK' : 'NG')
+puts(d.strftime('%d/%m/%y') == '15/02/24' ? 'OK' : 'NG')
