@@ -7,4 +7,7 @@ head.reverse
 # インデックス番号1から文字列"R"の位置を返す(インデックス番号0に位置する文字列は除外される)
 p head.index('R', 1)
 
-
+# method!は変数の値を変更する
+head.reverse!
+p head
+p head.index('R', 1)
