@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'date'
 
 d = Date.new(2024, 2, 15)
@@ -18,3 +20,5 @@ puts d.strftime('%y/%m/%d')
 puts d.strftime('%x')
 
 puts(d.strftime('%d/%m/%y') == '15/02/24' ? 'OK' : 'NG')
+
+p Date.today.to_s == Date.today.strftime('%Y-%m-%d')
