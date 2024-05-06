@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+# 見直し:https://rex.libertyfish.co.jp/exam_histories
+# リファレンス:
+
 require 'date'
 
 d = Date.new(2024, 2, 15)

@@ -7,6 +7,7 @@
 # https://docs.ruby-lang.org/ja/latest/method/Array/i/product.html
 # https://docs.ruby-lang.org/ja/latest/method/Array/i/transpose.html
 # https://docs.ruby-lang.org/ja/latest/method/Array/i/to_h.html
+# https://docs.ruby-lang.org/ja/latest/method/Array/i/slice.html
 
 # 文字列配列の書き方は以下の通り
 p ['apple', 'banana', 'orange']
@@ -38,6 +39,13 @@ a.each_with_index { |n, _i| puts n }
 
 # hashにする
 p [[:foo, :bar], [1, 2]].to_h
+
+# Array.slice:指定された自身の要素を返す
+# 第一引数:指定する要素, 第二引数:指定された要素から返す部分配列
+p [1, 2, 3, 4, 5].slice(2)
+# 3
+p [1, 2, 3, 4, 5].slice(2, 2)
+# [3, 4]
 
 # 同一オブジェクトの配列
 # ary = Array.new(3, "foo")

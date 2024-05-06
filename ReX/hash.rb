@@ -4,6 +4,7 @@
 # リファレンス:
 # https://docs.ruby-lang.org/ja/latest/method/Hash/i/each.html
 # https://docs.ruby-lang.org/ja/latest/method/Hash/i/invert.html
+# https://docs.ruby-lang.org/ja/latest/class/Hash.html#I_--5B--5D--3D
 
 { a: 1, b: 2 }.each { |a| p a }
 # 引数が1つだとハッシュごとの配列を返す
@@ -24,3 +25,19 @@
 h = { a: 100, b: 100, c: 200 }
 p h.invert
 # =>{100=>:c, 200=>:b}
+
+# ハッシュのキーはオブジェクトを指定する事が可能
+class_object = Class.new
+hash = { class_object => 100 }
+puts hash[class_object]
+
+# ハッシュはstoreメソッドでも作成する事が可能
+class_object = Class.new
+hash.store(class_object, 100)
+puts hash[class_object]
+
+# シンボルのキーをオブジェクトを指定するはできない
+class_object = Class.new
+hash = { class_object: 100 }
+puts hash[class_object]
+puts hash[:class_object]
