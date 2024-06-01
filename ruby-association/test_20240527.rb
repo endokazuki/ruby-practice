@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-# 50問の解答欄を作成
-# 怪しい解答　Q4 Q5 Q9 Q11 Q12 Q14 Q16 Q24 Q27 Q28 Q29 Q31 Q33 Q38 Q46のチェックリスト作成
+# 回答に自信がない場合は、確認の入力を行う
 check_list = {
   Q1: '',
   Q2: '',
